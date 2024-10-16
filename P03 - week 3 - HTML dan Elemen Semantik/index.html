@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 3 - Semantik dan Non Semantik</title>
+  </head>
+  <body>
+    <header
+      style="
+        padding: 20px;
+        background-color: rgb(0, 209, 237);
+        display: flex;
+        flex-direction: row;
+      "
+    >
+      <h1>My <span style="color: rgb(255, 0, 144)">Blog</span></h1>
+
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          margin-top: 30px;
+          margin-left: 450px;
+        "
+      >
+        <nav style="margin-right: 80px">
+          <a style="margin: 10px" href="#"><b> Home</b></a>
+          <a style="margin: 10px" href="#blog"><b> Blog</b></a>
+          <a style="margin: 10px" href="#video"><b> Video</b></a>
+        </nav>
+        <a href="#daftar"><b>Daftar</b> </a>
+      </div>
+    </header>
+    <main>
+      <section id="daftar">
+        <div
+          class="form"
+          style="
+            margin-left: 350px;
+            margin-right: 350px;
+            margin-top: 80px;
+            margin-bottom: 80px;
+            border: 3px solid black;
+            padding: 30px;
+          "
+        >
+          <h1 style="text-align: center">Formulir Pendaftaran</h1>
+          <br />
+          <form action="" method="post">
+            <table>
+              <tr>
+                <td><label for="nama">Nama </label></td>
+                <td>:</td>
+                <td>
+                  <input
+                    type="text"
+                    name="nama"
+                    id="nama"
+                    size="50px"
+                    placeholder="Masukan nama kamu"
+                    required
+                    style="
+                      padding-left: 10px;
+                      padding-right: 10px;
+                      padding-top: 7px;
+                      padding-bottom: 7px;
+                    "
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="password">Password </label></td>
+                <td>:</td>
+                <td>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    size="50px"
+                    required
+                    placeholder="Masukan password kamu"
+                    style="
+                      padding-left: 10px;
+                      padding-right: 10px;
+                      padding-top: 7px;
+                      padding-bottom: 7px;
+                    "
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="birth">Tanggal Lahir </label></td>
+                <td>:</td>
+                <td>
+                  <input
+                    type="date"
+                    style="
+                      padding-left: 10px;
+                      padding-right: 10px;
+                      padding-top: 7px;
+                      padding-bottom: 7px;
+                    "
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="jkel">Jenis Kelamin </label></td>
+                <td>:</td>
+                <td>
+                  <input
+                    type="radio"
+                    name="jkel"
+                    id="jkel"
+                    value="Pria"
+                    checked
+                  />Laki-Laki
+                  <br />
+                  <input
+                    type="radio"
+                    name="jkel"
+                    id="jkel"
+                    value="Perempuan"
+                  />Perempuan
+                  <br />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="jurusan">Jurusan </label></td>
+                <td>:</td>
+                <td>
+                  <select
+                    name="jurusan"
+                    id="jurusan"
+                    style="
+                      padding-left: 10px;
+                      padding-right: 10px;
+                      padding-top: 7px;
+                      padding-bottom: 7px;
+                    "
+                  >
+                    <option value="Ilmu Komputer">Ilmu Komputer</option>
+                    <option value="Ekonomi">Ekonomi</option>
+                    <option value="Manajemen">Manajemen</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="alamat">Alamat </label></td>
+                <td>:</td>
+                <td>
+                  <textarea
+                    id="alamat"
+                    name="alamat"
+                    rows="6"
+                    cols="50"
+                    placeholder="Alamat kamu...."
+                  >
+                  </textarea>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="bayar">Sudah bayar? </label></td>
+                <td>:</td>
+                <td>
+                  <input
+                    type="checkbox"
+                    name="bayar"
+                    id="bayar"
+                    required
+                  />Sudah
+                </td>
+              </tr>
+            </table>
+            <button type="submit">Kirim</button>
+            <button type="reset">Reset</button>
+          </form>
+        </div>
+      </section>
+      <section id="blog">
+        <h1 style="text-align: center">My Blog</h1>
+        <article
+          style="
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-bottom: 50px;
+            padding: 30px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+          "
+        >
+          <img src="assets/img/1.png" alt="blog 1" height="300px" />
+          <p style="margin-left: 30px; text-align: justify">
+            <b>Lorem ipsum dolor sit amet consectetur adipisicing elit</b>.
+            Excepturi inventore neque assumenda possimus corporis voluptatem
+            expedita reiciendis eveniet corrupti dolore voluptate eligendi in
+            sequi laudantium ex consectetur, perferendis alias! Tenetur, ipsum
+            ab reiciendis reprehenderit nam neque officia esse animi suscipit
+            pariatur porro deserunt nisi, aperiam exercitationem molestias
+            voluptatibus voluptatum ex, accusamus velit voluptatem eaque
+            consequuntur debitis? Sunt iure in velit amet quam expedita
+            exercitationem! At ullam deserunt sit perspiciatis laboriosam.
+            Ducimus saepe eum sequi quasi suscipit rem provident, accusamus
+            natus commodi veritatis rerum qui ea tenetur. Repellat aliquid odio
+            aperiam consequuntur cupiditate asperiores quae eius maiores quidem
+            reprehenderit corrupti sed aliquam quibusdam nesciunt nemo eos
+            dignissimos, obcaecati voluptatum. Sint cum libero nesciunt
+            excepturi optio facilis ipsum autem officia? Totam, pariatur?
+          </p>
+        </article>
+        <article
+          style="
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-bottom: 50px;
+            padding: 30px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+          "
+        >
+          <img src="assets/img/2.png" alt="blog 1" height="300px" />
+          <p style="margin-left: 30px; text-align: justify">
+            <b>Lorem ipsum dolor sit amet consectetur adipisicing elit</b>.
+            Excepturi inventore neque assumenda possimus corporis voluptatem
+            expedita reiciendis eveniet corrupti dolore voluptate eligendi in
+            sequi laudantium ex consectetur, perferendis alias! Tenetur, ipsum
+            ab reiciendis reprehenderit nam neque officia esse animi suscipit
+            pariatur porro deserunt nisi, aperiam exercitationem molestias
+            voluptatibus voluptatum ex, accusamus velit voluptatem eaque
+            consequuntur debitis? Sunt iure in velit amet quam expedita
+            exercitationem! At ullam deserunt sit perspiciatis laboriosam.
+            Ducimus saepe eum sequi quasi suscipit rem provident, accusamus
+            natus commodi veritatis rerum qui ea tenetur. Repellat aliquid odio
+            aperiam consequuntur cupiditate asperiores quae eius maiores quidem
+            reprehenderit corrupti sed aliquam quibusdam nesciunt nemo eos
+            dignissimos, obcaecati voluptatum. Sint cum libero nesciunt
+            excepturi optio facilis ipsum autem officia? Totam, pariatur?
+          </p>
+        </article>
+        <article
+          style="
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-bottom: 50px;
+            padding: 30px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+          "
+        >
+          <img src="assets/img/3.png" alt="blog 1" height="300px" />
+          <p style="margin-left: 30px; text-align: justify">
+            <b>Lorem ipsum dolor sit amet consectetur adipisicing elit</b>.
+            Excepturi inventore neque assumenda possimus corporis voluptatem
+            expedita reiciendis eveniet corrupti dolore voluptate eligendi in
+            sequi laudantium ex consectetur, perferendis alias! Tenetur, ipsum
+            ab reiciendis reprehenderit nam neque officia esse animi suscipit
+            pariatur porro deserunt nisi, aperiam exercitationem molestias
+            voluptatibus voluptatum ex, accusamus velit voluptatem eaque
+            consequuntur debitis? Sunt iure in velit amet quam expedita
+            exercitationem! At ullam deserunt sit perspiciatis laboriosam.
+            Ducimus saepe eum sequi quasi suscipit rem provident, accusamus
+            natus commodi veritatis rerum qui ea tenetur. Repellat aliquid odio
+            aperiam consequuntur cupiditate asperiores quae eius maiores quidem
+            reprehenderit corrupti sed aliquam quibusdam nesciunt nemo eos
+            dignissimos, obcaecati voluptatum. Sint cum libero nesciunt
+            excepturi optio facilis ipsum autem officia? Totam, pariatur?
+          </p>
+        </article>
+      </section>
+      <section id="video">
+        <h1 style="text-align: center">My Video</h1>
+        <video
+          style="margin-left: 25%; margin-top: 30px"
+          src="assets/video/Nature.mp4"
+          controls
+        ></video>
+        <h1 style="text-align: center">Rekomendasi Video</h1>
+        <iframe
+          style="margin-left: 25%; margin-top: 30px"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/xtO01ZthVGE?si=ULTBqFRpDeUZbDti"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <h1 style="text-align: center">Rekomendasi Audio</h1>
+        <audio controls>
+          <source src="assets/audio/audio.mp3" type="audio" />
+        </audio>
+      </section>
+    </main>
+    <footer
+      style="margin: 30px; padding: 30px; background-color: rgb(0, 209, 237)"
+    >
+      <h1 style="text-align: center">
+        Created By <a href="">Benony Gabriel</a>
+      </h1>
+    </footer>
+  </body>
+</html>
