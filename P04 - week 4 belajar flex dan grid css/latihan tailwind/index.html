@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="grid grid-rows-[auto,1fr,auto] grid-cols-4 gap-4 h-screen">
+    <header class="col-span-4 bg-red-600 p-4">Ini Header</header>
+    <aside class="bg-blue-500 p-4 col-span-1">Ini aside</aside>
+    <main class="bg-green-500 p-4 col-span-3 text-3xl font-bold">
+      <h1 class="text-white text-4xl">Ini main content</h1>
+    </main>
+    <footer class="col-span-4 bg-amber-600 p-4">Ini footer</footer>
+  </body>
+</html>
