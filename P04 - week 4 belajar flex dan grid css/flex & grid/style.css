@@ -1,0 +1,77 @@
+body, html{
+    margin: 30px;
+}
+
+header h1{
+    text-align: center;
+}
+
+
+main .container{
+    background-color: aquamarine;
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    border: 4px solid black;
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: center; */
+    flex-wrap: wrap;
+}
+
+main .container .item{
+    background-color: rgb(183, 100, 0);
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main .parent{
+    background-color: aqua;
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    border: 4px solid black;
+    padding: 10px;
+    display: grid;
+    /* grid-auto-rows: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "side content"
+    "footer footer"; */
+    /* grid-area: 1 / 1 / 2 / 3; */
+}
+
+main .parent header{
+    background-color: brown;
+    /* height: 50px; */
+    /* grid-area: footer; */
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+main .parent aside{
+    background-color: rgb(42, 114, 165);
+    /* height: 50px; */
+    /* grid-area: side; */
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+main .parent footer{
+    background-color: rgb(165, 126, 42);
+    /* height: 50px; */
+    /* grid-area: footer; */
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+main .parent .content{
+    background-color: rgb(11, 184, 77);
+    /* grid-area: content; */
+    grid-area: 2 / 2 / 3 / 3;
+
+}
