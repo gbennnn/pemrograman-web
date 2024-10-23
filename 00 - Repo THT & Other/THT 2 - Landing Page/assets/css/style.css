@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h2, p{
+    text-align: center;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #06aa97;
+    color: white;
+}
+
+header h1{
+    font-size: 24px;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li{
+    margin-left: 20px;
+}
+
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2, ifr);
+    gap: 20px;
+    padding: 40px;
+}
+
+code{
+    padding: 5px;
+    background-color: #283966;
+    color: white;
+    border-radius: 4px;
+}
+
+section .about-content{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+section .about-content p{
+    text-align: justify;
+    margin-left: 30px;
+}
+
+.profil{
+    max-width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 100%; 
+    margin: 30px;
+    border: 5px solid #ddd;
+}
+
+section{
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section .blogs{
+    display: flex;
+}
+
+#blog .subtitle, #contact .p-contact{
+    margin: 30px;
+}
+
+/* Styling card */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.card-content a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #008cba;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card-content a:hover {
+    text-decoration: underline;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #008cba;
+    outline: none;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #005f8a;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    /* position: absolute; */
+    width: 100%;
+    bottom: 0;
+}
