@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lg:content-auto">
+      <!-- ... -->
+      <h1>Helloo</h1>
+    </div>
+    <h1 class="text-[200px] font-bold underline text-red-500">Hello world!</h1>
+    <h1 class="text-3xl font-bold underline text-clifford">Hello world!</h1>
+  </body>
+</html>
