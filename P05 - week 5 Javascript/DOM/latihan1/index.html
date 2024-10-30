@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan DOM</title>
+    <style>
+      main .form,
+      .result {
+        width: fit-content;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 8px;
+        border: 2px outset black;
+      }
+
+      .form h1,
+      .form p {
+        text-align: center;
+      }
+
+      #nama,
+      #email,
+      #password,
+      #konfirmasi-password {
+        padding: 5px 15px;
+        width: 80%;
+      }
+
+      button {
+        padding: 8px 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: turquoise;
+      }
+
+      button:hover {
+        background-color: rgb(31, 182, 167);
+      }
+
+      .error {
+        color: red;
+        font-size: 0.9em;
+      }
+
+      .result {
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="form">
+        <h1>Daftar</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <br />
+        <form action="" id="registrationForm">
+          <label for="nama">Nama Lengkap</label><br />
+          <input
+            type="text"
+            id="nama"
+            name="nama"
+            placeholder="Nama kamu"
+          /><br />
+          <span id="namaError" class="error"></span><br />
+
+          <label for="email">Email</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email kamu"
+          /><br />
+          <span id="emailError" class="error"></span><br />
+
+          <label for="password">Password</label><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password kamu"
+          /><br />
+          <span id="passwordError" class="error"></span><br />
+
+          <label for="konfirmasi-password">Konfirmasi Password</label><br />
+          <input
+            type="password"
+            id="konfirmasi-password"
+            name="konfirmasi-password"
+            placeholder="Konfirmasi password"
+          /><br />
+          <span id="konfirmasiPasswordError" class="error"></span><br />
+
+          <label for="setuju"></label>
+          <input type="checkbox" id="setuju" />Setuju syarat dan kebijakan?
+          <br />
+          <span id="setujuError" class="error"></span><br /><br />
+
+          <button type="reset">Clear</button>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="result" id="result"></div>
+    </main>
+
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Mencegah form dari pengiriman default
+
+          // Ambil nilai dari input
+          const nama = document.getElementById("nama").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const konfirmasiPassword = document.getElementById(
+            "konfirmasi-password"
+          ).value;
+          const setuju = document.getElementById("setuju").checked;
+
+          // Reset pesan error
+          document.getElementById("namaError").innerText = "";
+          document.getElementById("emailError").innerText = "";
+          document.getElementById("passwordError").innerText = "";
+          document.getElementById("konfirmasiPasswordError").innerText = "";
+          document.getElementById("setujuError").innerText = "";
+
+          let isValid = true; // Untuk melacak apakah form valid
+
+          // Validasi input
+          if (!nama) {
+            document.getElementById("namaError").innerText =
+              "Nama wajib diisi!";
+            isValid = false;
+          }
+          if (!email) {
+            document.getElementById("emailError").innerText =
+              "Email wajib diisi!";
+            isValid = false;
+          }
+          if (!password) {
+            document.getElementById("passwordError").innerText =
+              "Password wajib diisi!";
+            isValid = false;
+          }
+          if (!konfirmasiPassword) {
+            document.getElementById("konfirmasiPasswordError").innerText =
+              "Konfirmasi password wajib diisi!";
+            isValid = false;
+          }
+          if (!setuju) {
+            document.getElementById("setujuError").innerText =
+              "Anda harus setuju dengan syarat dan kebijakan!";
+            isValid = false;
+          }
+
+          // Validasi password
+          if (password !== konfirmasiPassword) {
+            alert("Password dan konfirmasi password tidak cocok!");
+            return;
+          }
+
+          // Tampilkan hasil jika semua validasi berhasil
+          if (isValid) {
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `<h2>Data Pengguna:</h2>
+                                       <p>Nama: ${nama}</p>
+                                       <p>Email: ${email}</p>`;
+            resultDiv.style.display = "block"; // Tampilkan hasil
+          }
+        });
+    </script>
+  </body>
+</html>
