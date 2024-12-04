@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simple Form - Benony Gabriel?</title>
+
+        <style>
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .form {
+                border: 1px solid black;
+                width: fit-content;
+                margin: auto;
+                padding: 20px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form">
+            <h1>Login Kuis</h1>
+            <form action="dashboard.php" method="post">
+                <table border="0" cellpadding="10px" cellspacing="0">
+                    <tr>
+                        <td>
+                            <label for="fname">Nama Depan</label><br />
+                            <input
+                                type="text"
+                                id="fname"
+                                name="fname"
+                                value="Benony"
+                            />
+                        </td>
+                        <td>
+                            <label for="lname">Nama Belakang</label><br />
+                            <input
+                                type="text"
+                                id="lname"
+                                name="lname"
+                                value="Gabriel"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="nim">NIM</label><br />
+                            <input
+                                type="number"
+                                id="nim"
+                                name="nim"
+                                value="105222002"
+                            />
+                        </td>
+                        <td>
+                            <label for="prodi">Program Studi</label><br />
+                            <select name="prodi" id="prodi">
+                                <option value="Ilmu Komputer" selected>
+                                    Ilmu Komputer
+                                </option>
+                                <option value="Teknik Lingkungan">
+                                    Teknik Lingkungan
+                                </option>
+                                <option value="Ekonomi">Ekonomi</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <label>Jenis Kelamin</label><br />
+                            <input
+                                type="radio"
+                                id="pria"
+                                name="jkel"
+                                value="Pria"
+                                checked
+                            />
+                            <label for="pria">Pria</label>
+
+                            <input
+                                type="radio"
+                                id="wanita"
+                                name="jkel"
+                                value="Wanita"
+                            />
+                            <label for="wanita">Wanita</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button
+                                type="submit"
+                                onclick="alert('Berhasil login!')"
+                            >
+                                Kirim
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
